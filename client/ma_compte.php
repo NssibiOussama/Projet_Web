@@ -41,7 +41,7 @@ if (($_SESSION['role'] == 'admin')) {
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#" style="color: white">Bienvenue, <?php echo $_SESSION['nom']; ?></a></li>
-            <li><a href="../authclient_logout.php" style="color: white">Déconnexion</a></li>
+            <li><a href="../auth/client_logout.php" style="color: white">Déconnexion</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -52,7 +52,8 @@ if (($_SESSION['role'] == 'admin')) {
         <div class="row">
           <div class="col-md-10">
             <h1><img src="../images/user.png" style="width: 50px; height: 50px">LES SEMINAIRES DU CLUB
-              <small>&nbsp;&nbsp;</small></h1>
+              <small>&nbsp;&nbsp;</small>
+            </h1>
           </div>
 
         </div>
