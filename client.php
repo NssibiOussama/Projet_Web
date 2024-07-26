@@ -48,7 +48,7 @@ if(($_SESSION['role']=='admin'))
       <div class="container">
         <div class="row">
           <div class="col-md-10">
-            <h1><img src="images/user.png" style="width: 50px; height: 50px"> Les seminaires du club <small>&nbsp;&nbsp;</small></h1>
+            <h1><img src="images/user.png" style="width: 50px; height: 50px"> Les seminairess du club <small>&nbsp;&nbsp;</small></h1>
           </div>
          
         </div>
