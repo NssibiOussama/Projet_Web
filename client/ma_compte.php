@@ -52,9 +52,10 @@
                   $cle_primaire = "nom";
                   $val_cle_primaire = $_SESSION['nom'];
 
+
                   $sql = "SELECT * FROM $table where $cle_primaire= '$val_cle_primaire'";
                   $reponse = $bdd->query($sql) or die($bdd->errorInfo()[2]);
-                  if ($reponse->rowCount() == 1) {
+                  if ($reponse->rowCount() >= 1) {
                     ?>
                 </div><br>
                 <div class="panel-body">
@@ -78,16 +79,7 @@
 
                     <?php
                     while ($ligne = $reponse->fetchobject()) {
-                      function get_prix($bdd, $type_salles)
-                      {
-                        $sql = "SELECT prix FROM salles where type='$type_salles'";
-                        $reponse = $bdd->query($sql) or die($bdd->errorInfo()[2]);
-                        $prix = $reponse->fetchObject();
-                        $tarif = $prix->prix + (500 * 4);
-                        return $tarif;
 
-
-                      }
                       ?>
                       <tr>
                         <td><?php echo $ligne->nom; ?> </td>
