@@ -74,7 +74,7 @@ if(($_SESSION['role']=='admin'))
               <a href="../projet_fin/client_message.php" class="list-group-item" style="background-color: #f4f4f4;"><span class="fa fa-pencil" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Écrire un message</a><br>
 
                 <a href="#" class="list-group-item active main-color-bg">
-                <span class="fa fa-bed" aria-hidden="true"></span>&nbsp;&nbsp;Tarifs
+                <span class="fa fa-bed" aria-hidden="true"></span>&nbsp;&nbsp;Tarifss
               </a>
                <div class="well">
           <p>• <b>L’Amphithéâtre</b> - 2 399.00.</p>
