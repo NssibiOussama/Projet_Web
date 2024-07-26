@@ -84,9 +84,9 @@
             </a>
             <ul class="dropdown-menu">
               <li><a href="#" class="nav-text"><span class="fa fa-sign-in">
-                <font face="century gothic">&nbsp;&nbsp;&nbsp;Se connecter</font></a></li>
+                    <font face="century gothic">&nbsp;&nbsp;&nbsp;Se connecter</font></a></li>
               <li><a href="#" class="nav-text"><span class="fa fa-user-plus">
-                <font face="century gothic">&nbsp;&nbsp;&nbsp;S'inscrire</font></a></li>
+                    <font face="century gothic">&nbsp;&nbsp;&nbsp;S'inscrire</font></a></li>
             </ul>
           </li>
         </ul>
@@ -121,7 +121,6 @@
         </form>
       </div>
       <div id="signup">
-        <h1 style="font-size: 25px">S'inscrire</h1>
         <form action="client_create_db.php" method="post" enctype="multipart/form-data">
           <div class="top-row">
             <div class="field-wrap">
@@ -153,7 +152,7 @@
       </div>
     </div>
   </div>
-  <script src="../js/index.js"></script>
+
   <footer class="container-fluid text-center">
     <div class="col-md-12">
       <font face="century gothic" size="4">
@@ -162,5 +161,7 @@
       <div class="social"></div>
     </div>
   </footer>
+  <script src="../js/index.js"></script>
 </body>
+
 </html>

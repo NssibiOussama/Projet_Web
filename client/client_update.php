@@ -2,10 +2,10 @@
 session_start();
 
 if ((!isset($_SESSION['role'])) || (empty($_SESSION['role']))) {
-  header("location: ../home.php");
+  header("location: ../projet_fin/home.php");
 }
 if (($_SESSION['role'] == 'admin')) {
-  header("location: ../session_admin/admin_page.php");
+  header("location: ../proget_fin/admin_page.php");
 }
 ?>
 
@@ -66,7 +66,8 @@ $cle_primaire= $val_cle_primaire AND nom='$nom'";
             <div class="row">
               <div class="col-md-10">
                 <h1><img src="../images/user.png" style="width: 50px; height: 50px"> Les seminaires du club
-                  <small>&nbsp;&nbsp;</small></h1>
+                  <small>&nbsp;&nbsp;</small>
+                </h1>
               </div>
 
             </div>
@@ -293,7 +294,7 @@ $cle_primaire= $val_cle_primaire AND nom='$nom'";
     <script>
       CKEDITOR.replace('editor1');
     </script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   </font>
 </body>
 
