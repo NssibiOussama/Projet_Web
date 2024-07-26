@@ -33,6 +33,7 @@ if ($nb == 0) {
 	if ($ligne->role == 'admin') {
 		$_SESSION['role'] = 'admin';
 		$_SESSION['nom'] = $ligne->nom;
+		$_SESSION['profile_image'] = $ligne->profile_image;
 
 		header("location: ../session_admin/admin_page.php");
 		exit;
@@ -40,6 +41,8 @@ if ($nb == 0) {
 	} else {
 		$_SESSION['role'] = 'client';
 		$_SESSION['nom'] = $ligne->nom;
+		$_SESSION['profile_image'] = $ligne->profile_image;
+
 		header("location: ../client/client.php");
 		exit;
 	}

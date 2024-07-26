@@ -1,5 +1,5 @@
 <?php
-include_once 'connexion/connexion.php';
+include_once '../connexion/connexion.php';
 $bdd=maConnexion() ;
 $table="reservation" ;
 if (isset($_REQUEST['email']) and (!empty($_REQUEST['email'])))
@@ -61,7 +61,7 @@ $tarif=	$prix->prix +(500*4) ;
  
 if(isset($_POST['Enregistrer']) and($date_fin<$date_debut)){
 $msg= "date début ne peut pas etre supérieure à la date de fin";
-	header('location: ../projet_fin/client.php?msg='.$msg.'');
+	header('location: client.php?msg='.$msg.'');
 }
 else{
 	 $sql = "INSERT INTO reservation (reservation_id,nom,email,telephone,type_salles,type_event,date_debut, date_fin,prix)
@@ -72,7 +72,7 @@ die("<p> Impossible d'effectuer la requete!".$bdd->errorInfo()[2]."</p>") ;
 else{
 
 					$msg= "SUCCESSFULL!";
-					header('location: ../projet_fin/client.php?msg='.$msg.'');
+					header('location: client.php?msg='.$msg.'');
 					
 }
 }

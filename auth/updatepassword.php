@@ -1,7 +1,7 @@
 <?php
-require 'vendor/src/Exception.php';
-require 'vendor/src/PHPMailer.php';
-require 'vendor/src/SMTP.php';
+require '../vendor/src/Exception.php';
+require '../vendor/src/PHPMailer.php';
+require '../vendor/src/SMTP.php';
 require '../connexion/connexion.php';
 
 use PHPMailer\PHPMailer\PHPMailer;

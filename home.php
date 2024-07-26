@@ -549,7 +549,7 @@
 				</font>
 				<div class="col-md-6">
 
-					<form class="form-horizontal" action="client_message_db.php" method="post"><br><br>
+					<form class="form-horizontal" action="client/client_message_db.php" method="post"><br><br>
 						<div class="form-group input-group">
 							<span class="input-group-addon">
 								<span class="glyphicon glyphicon-user"></span>

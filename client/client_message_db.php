@@ -1,5 +1,5 @@
 <?php
-include_once 'connexion/connexion.php';
+include_once '../connexion/connexion.php';
 $bdd = maConnexion();
 $table = "message";
 if (isset($_REQUEST['email']) and (!empty($_REQUEST['email'])))
@@ -25,7 +25,7 @@ if ($nb != 1)
 else {
 
 	$msg = "Message has been sent!!";
-	header('location: ../projet_fin/client_message.php?msg=' . $msg . '');
+	header('location: client_message.php?msg=' . $msg . '');
 
 }
 ?>
