@@ -172,7 +172,7 @@
 					<p>CENTRE DEL'ARMORICAINE</p>
 					<ul class="mylist">
 						<li>
-							Faites découvrir à vos clients, collaborateurs ou partenaires cet espace d’exception, situé
+							Faites découvrirr à vos clients, collaborateurs ou partenaires cet espace d’exception, situé
 							au sein du centre de formation du Stade Brestois 29. Après votre présentation sur la grande
 							scène de 32 m² avec écran géant, vous profiterez de sa salle de restaurant et son espace...
 						</li>
