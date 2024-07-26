@@ -2,10 +2,10 @@
 session_start();
 
 if ((!isset($_SESSION['role'])) || (empty($_SESSION['role']))) {
-  header("location: ../projet_fin/home.php");
+  header("location: ../home.php");
 }
 if (($_SESSION['role'] == 'client')) {
-  header("location: ../proget_fin/client.php");
+  header("location: ../client/client.php");
 }
 ?>
 
@@ -17,12 +17,12 @@ if (($_SESSION['role'] == 'client')) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Session Admin </title>
-  <link rel="shortcut icon" href="image/admin_icon1.png">
-  <link href="session_admin/css/bootstrap.min.css" rel="stylesheet">
-  <link href="session_admin/css/styles.css" rel="stylesheet">
-  <script src="session_admin/js/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="session_admin/css/font-awesome.css">
-  <script src="session_admin/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="../image/admin_icon1.png">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="js/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -58,7 +58,8 @@ if (($_SESSION['role'] == 'client')) {
       <div class="container">
         <div class="row">
           <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span>Page d'acceuil
-            <small>&nbsp;&nbsp;Admin</small></h1>
+            <small>&nbsp;&nbsp;Admin</small>
+          </h1>
         </div>
 
       </div>
@@ -70,21 +71,21 @@ if (($_SESSION['role'] == 'client')) {
         <div class="row">
           <div class="col-md-3">
             <div class="list-group">
-              <a href="../Projet_fin/admin_page.php" class="list-group-item active main-color-bg"><span
+              <a href="admin_page.php" class="list-group-item active main-color-bg"><span
                   class="glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Dashbord</a>
-              <a href="../projet_fin/admin_page.php" class="list-group-item"><span class="fa fa-home"
+              <a href="admin_page.php" class="list-group-item"><span class="fa fa-home"
                   aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Page d'acceuil</a>
-              <a href="../projet_fin/Information_client.php" class="list-group-item"><span class="fa fa-user-o"
+              <a href="Information_client.php" class="list-group-item"><span class="fa fa-user-o"
                   aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Clients entrants</a>
-              <a href="../projet_fin/approve_client1.php" class="list-group-item"><span class="fa fa-sign-in"
+              <a href="approve_client1.php" class="list-group-item"><span class="fa fa-sign-in"
                   aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Client verifié</a>
-              <a href="../projet_fin/client_check_out.php" class="list-group-item"><span class="fa fa-sign-out"
+              <a href="client_check_out.php" class="list-group-item"><span class="fa fa-sign-out"
                   aria-hidden="true"></span>&nbsp;&nbsp;&nbsp; Client extrait</a>
 
 
-              <a href="../projet_fin/messages.php" class="list-group-item"><span class="fa fa-envelope-open-o"
+              <a href="messages.php" class="list-group-item"><span class="fa fa-envelope-open-o"
                   aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;boîte de réception</a>
-              <a href="../Projet_fin/unset_admin.php" class="list-group-item active main-color-bg"><span
+              <a href="unset_admin.php" class="list-group-item active main-color-bg"><span
                   class="glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Déconnexion</a>
             </div>
 
@@ -137,7 +138,7 @@ if (($_SESSION['role'] == 'client')) {
 
 
                       <?php
-                      include_once ("connexion/connexion.php");
+                      include_once ("../connexion/connexion.php");
                       $bdd = maConnexion();
                       $table = "reservation";
                       if (isset($_POST['rechercher'])) {
@@ -147,7 +148,7 @@ if (($_SESSION['role'] == 'client')) {
                           exit;
                         } else
 
-                          $sql = "SELECT * FROM $table where nom LIKE '%$mot%' OR (`type_salles` LIKE '%$mot%')  OR (`type_event` LIKE '%$mot%') AND  `statut` = 'approved'";
+                          $sql = "SELECT * FROM $table where nom LIKE '%$mot%' OR (`type_salles` LIKE '%$mot%')  OR (`type_event` LIKE '%$mot%') AND   `statut` = 'checkout'";
                         $reponse = $bdd->query($sql) or die($bdd->errorInfo()[2]);
                         while ($ligne = $reponse->fetchobject()) {
                           $nom = $ligne->nom;
@@ -184,6 +185,7 @@ if (($_SESSION['role'] == 'client')) {
 
                           $prix = $ligne->prix;
                           $_SESSION['prix'] = $ligne->prix;
+
 
 
                           ?>
@@ -223,99 +225,75 @@ if (($_SESSION['role'] == 'client')) {
                                 echo "<b>Date Fin :  </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" . $date_fin . " Days" . "<br>";
                                 echo "<b>Tarifs : </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" . "PHP " . $prix . ".00" . "<br><br>";
                                 ?>
-
                               </div>
                             </div>
-                            <div class="col-md-3" style="display: none;">
-                              <div class="row">
-                                <form action="../projet_fin/client_approve_db.php"><button id="cancel"
-                                    class="pull-left">Approve</button>
-                                </form>
-                              </div>
-                            </div>
-                            <div class="col-md-3">
-                              <div class="row">
-                                <form action="../projet_fin/client_approve_db.php"><button id="cancel"
-                                    style="display: none;" class="pull-left">Check - Out</button>
-                                </form>
-                              </div>
-                            </div>
-
-                            <div class="col-md-3">
-                              <div class="row">
-                                <form action="../projet_fin/client_check_out_db.php"><button id="cancel"
-                                    class="pull-left">Fin résérvation</button>
-                                </form>
-                              </div>
-                            </div>
-                            </div>
-                            <?php
+                          </div>
+                          <?php
                         }
                       }
                       ?>
-                        <div class="col-md-12">
-                          <div class="panel panel-default">
-                            <div class="panel-heading main-color-bg">
-                              <h3 class="panel-title">Information</h3>
-                            </div>
+                      <div class="col-md-12">
+                        <div class="panel panel-default">
+                          <div class="panel-heading main-color-bg">
+                            <h3 class="panel-title">Information</h3>
+                          </div>
 
 
+
+                          <?php
+                          include_once ("../connexion/connexion.php");
+                          $bdd = maConnexion();
+                          $table = "reservation";
+
+                          $sql = "SELECT * FROM $table  WHERE `statut` = 'checkout'";
+                          $reponse = $bdd->query($sql) or die($bdd->errorInfo()[2]);
+
+                          ?>
+                          <table class="table table-striped table-hover">
+                            <tr>
+
+                              <th>Nom</th>
+                              <th>Type de salles</th>
+                              <th>Type d'événement</th>
+                              <th>Date début</th>
+                              <th>Date fin </th>
+                              <th>Prix</th>
+                              <th>statut</th>
+
+
+                            </tr>
                             <?php
-                            include_once ("connexion/connexion.php");
-                            $bdd = maConnexion();
-                            $table = "reservation";
-                            $cle_primaire = "statut";
-
-                            $sql = "SELECT * FROM $table  WHERE `statut` = 'approved'";
-                            $reponse = $bdd->query($sql) or die($bdd->errorInfo()[2]);
-
-                            ?>
-                            <table class="table table-striped table-hover">
-                              <tr>
-
-                                <th>Nom</th>
-                                <th>Type de salles</th>
-                                <th>Type d'événement</th>
-                                <th>Date début</th>
-                                <th>Date fin </th>
-                                <th>Prix</th>
-                                <th>statut</th>
-
-
-                              </tr>
-                              <?php
-                              while ($ligne = $reponse->fetchobject()) {
-
-                                ?>
-                                <tr>
-
-                                  <td><?= $ligne->nom; ?></td>
-                                  <td><?php echo $ligne->type_salles; ?> </td>
-                                  <td><?= $ligne->type_event ?></td>
-                                  <td><?php echo $ligne->date_debut; ?> </td>
-                                  <td><?= $ligne->date_fin ?></td>
-                                  <td><?php echo $ligne->prix; ?> </td>
-                                  <td><button class="approved" title="Vérifier"></button>
-                                  <td>
-
-
-
-                                    <?php
-                              }
+                            while ($ligne = $reponse->fetchobject()) {
 
                               ?>
-                            </table>
+                              <tr>
+
+                                <td><?= $ligne->nom; ?></td>
+                                <td><?php echo $ligne->type_salles; ?> </td>
+                                <td><?= $ligne->type_event ?></td>
+                                <td><?php echo $ligne->date_debut; ?> </td>
+                                <td><?= $ligne->date_fin ?></td>
+                                <td><?php echo $ligne->prix; ?> </td>
+                                <td><button class="out" title="Fin résérvation"></button>
+                                <td>
+
+
+                                  <?php
+                            }
+
+                            ?>
+                          </table>
 
 
 
 
 
 
-                          </div>
                         </div>
                       </div>
               </div>
             </div>
+          </div>
     </section>
 
     <footer id="footer">
@@ -366,8 +344,6 @@ if (($_SESSION['role'] == 'client')) {
       CKEDITOR.replace('editor1');
     </script>
   </font>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

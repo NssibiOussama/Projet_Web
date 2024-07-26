@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once ("connexion/connexion.php");
+include_once ("../connexion/connexion.php");
 $bdd = maConnexion();
 $table = "reservation";
 
@@ -11,10 +11,12 @@ $email = $_SESSION['email'];
 $telephone = $_SESSION['telephone'];
 $type_salles = $_SESSION['type_salles'];
 $type_event = $_SESSION['type_event'];
+
+
 $date_debut = $_SESSION['date_debut'];
 $date_fin = $_SESSION['date_fin'];
 $prix = $_SESSION['prix'];
-$sql = "UPDATE $table SET statut= 'checkout'  WHERE  email='$email' AND statut = 'approved'";
+$sql = "UPDATE $table SET statut= 'approved'  WHERE  email='$email' AND statut = 'Entrante'";
 $nblignes = $bdd->exec($sql);
 if ($nblignes != 1) {
 
@@ -25,3 +27,5 @@ if ($nblignes != 1) {
   $msg = 'Succesfull!';
   header('Location:Information_client.php?msg=' . $msg . '');
 }
+
+?>

@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <title>LES SEMINAIRES DU CLUB</title>
-  <link rel="shortcut icon" href="product/header_logo.png">
-  <script src="js/jquery.min.js"></script>
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="../product/header_logo.png">
+  <script src="../js/jquery.min.js"></script>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/bootstrap.min.js"></script>
 </head>
 
 <body style="overflow-x: hidden;">
@@ -23,7 +23,7 @@
     }
   </style>
   <nav class=" navbar-default navbar-inverse navbar-fixed-top" style="background-color: black;">
-    <img src="product/header_logo.png" id="logo">
+    <img src="../product/header_logo.png" id="logo">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-target="#mainNavbar" data-toggle="collapse">
@@ -34,9 +34,9 @@
       </div>
       <div class="navbar-collapse collapse" id="mainNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="index1.php" class="nav-text"></span> ACCEUIL</li></a>
-          <li><a href="home.php#about.us" class="nav-text"></span> SERVICES</li></a>
-          <li><a href="home.php#contact.us" class="nav-text"></span> CONTACT</li></a>
+          <li><a href="../index1.php" class="nav-text"></span> ACCEUIL</li></a>
+          <li><a href="../home.php#about.us" class="nav-text"></span> SERVICES</li></a>
+          <li><a href="../home.php#contact.us" class="nav-text"></span> CONTACT</li></a>
 
           <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -44,11 +44,11 @@
               <span class="caret "></span>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="/Projet_fin/home.php#seminaire" class="nav-text"></span> Séminaires</a></li>
-              <li><a href="/Projet_fin/home.php#lancement" class="nav-text"></span> Lancement de produit</a></li>
-              <li><a href="/Projet_fin/home.php#fete" class="nav-text"></span> Fête de fin d’année</a></li>
-              <li><a href="/Projet_fin/home.php#Soiree" class="nav-text"></span>Soirée de gala</a></li>
-              <li><a href="/Projet_fin/home.php#anniversaire" class="nav-text"></span> Anniversaire d'entreprise</a>
+              <li><a href="../home.php#seminaire" class="nav-text"></span> Séminaires</a></li>
+              <li><a href="../home.php#lancement" class="nav-text"></span> Lancement de produit</a></li>
+              <li><a href="../home.php#fete" class="nav-text"></span> Fête de fin d’année</a></li>
+              <li><a href="../home.php#Soiree" class="nav-text"></span>Soirée de gala</a></li>
+              <li><a href="../home.php#anniversaire" class="nav-text"></span> Anniversaire d'entreprise</a>
               </li>
 
 
@@ -61,9 +61,9 @@
               <span class="caret "></span>
             </a>
             <ul class="dropdown-menu">
-              <li><a href="signin_signup.php" class="nav-text" style="color"><span class="fa fa-sign-in">
+              <li><a href="#" class="nav-text" style="color"><span class="fa fa-sign-in">
                     <font face="century gothic">&nbsp;&nbsp;&nbsp;Se connecter </font></a></li>
-              <li><a href="signin_signup.php" class="nav-text"><span class="fa fa-user-plus">
+              <li><a href="#" class="nav-text"><span class="fa fa-user-plus">
                     <font face="century gothic">&nbsp;&nbsp;&nbsp;S'inscrire</font></a></li>
 
             </ul>
@@ -72,7 +72,7 @@
       </div>
     </div>
   </nav>
-  <img src="images/2.jpg" id="bg">
+  <img src="../images/2.jpg" id="bg">
   <div class="form">
 
     <ul class="tab-group">
@@ -87,7 +87,7 @@
       <div id="login">
         <h1 style="font-size: 25px">Bienvenue au seminaire du club</h1>
 
-        <form action="../projet_fin/client_login_db.php" method="post">
+        <form action="client_login_db.php" method="post">
 
           <div class="field-wrap">
             <label>
@@ -120,7 +120,7 @@
       <div id="signup">
         <h1 style="font-size: 25px">S'inscrire</h1>
 
-        <form action="../projet_fin/client_create_db.php" method="post">
+        <form action="client_create_db.php" method="post">
 
           <div class="top-row">
             <div class="field-wrap">
@@ -161,7 +161,7 @@
 
   </div> <!-- /form -->
 
-  <script src="js/index.js"></script>
+  <script src="../js/index.js"></script>
   <footer class="container-fluid text-center">
     <div class="col-md-12">
       <font face="century gothic" size="4">

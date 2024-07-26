@@ -61,9 +61,10 @@
 							<span class="caret "></span>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="signin_signup.php" class="nav-text" style="color"><span class="fa fa-sign-in">
+							<li><a href="auth/signin_signup.php" class="nav-text" style="color"><span
+										class="fa fa-sign-in">
 										<font face="century gothic">&nbsp;&nbsp;&nbsp;Se connecter</font></a></li>
-							<li><a href="signin_signup.php" class="nav-text"><span class="fa fa-user-plus">
+							<li><a href="auth/signin_signup.php" class="nav-text"><span class="fa fa-user-plus">
 										<font face="century gothic">&nbsp;&nbsp;&nbsp;S'inscrire</font></a></li>
 
 						</ul>
@@ -241,7 +242,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="thumbnail text-center " id="thumbnail1">
 								<img src="product/sale_1.jpg" class="img-responsive margin ">
-								<a href="signin_signup.php">
+								<a href="auth/signin_signup.php">
 									<font face="lato"><button class="btn"">Reserved Now!</button> </font></a>
 				<p></p>
 				<div id=" bedroom_info">
@@ -258,7 +259,7 @@
 					<div class="col-md-3 col-sm-6 col-xs-6">
 						<div class="thumbnail text-center " id="thumbnail1">
 							<img src="product/amphi1.JPG" class="img-responsive margin ">
-							<a href="signin_signup.php">
+							<a href="auth/signin_signup.php">
 								<font face="lato"><button class="btn"">Reserved Now!</button> </font></a>
 				<p></p>
 				<div id=" bedroom_info">
@@ -273,7 +274,7 @@
 				<div class="col-md-3 col-sm-6 col-xs-6">
 					<div class="thumbnail text-center " id="thumbnail1">
 						<img src="product/caree1.JPG" class="img-responsive margin ">
-						<a href="signin_signup.php">
+						<a href="auth/signin_signup.php">
 							<font face="lato"><button class="btn"">Reserved Now!</button> </font></a>
 				<p></p>
 				<div id=" bedroom_info">
@@ -288,7 +289,7 @@
 			<div class="col-md-3 col-sm-6 col-xs-6">
 				<div class="thumbnail text-center " id="thumbnail1">
 					<img src="product/legende1.png" class="img-responsive margin ">
-					<a href="signin_signup.php">
+					<a href="auth/signin_signup.php">
 						<font face="lato"><button class="btn"">Reserved Now!</button> </font></a>
 				<p></p>
 				<div id=" bedroom_info">
@@ -460,7 +461,7 @@
 						<div class="col-md-3 col-sm-6 col-xs-6">
 							<div class="thumbnail text-center " id="thumbnail1">
 								<img src="product/securite.jpg" class="img-responsive margin ">
-								<a href="signin_signup.php">
+								<a href="auth/signin_signup.php">
 									<font face="lato"><button class="btn"">Reserved Now!</button> </font></a>
 				<p></p>
 				<div id=" bedroom_info">
@@ -475,7 +476,7 @@
 					<div class="col-md-3 col-sm-6 col-xs-6">
 						<div class="thumbnail text-center " id="thumbnail1">
 							<img src="product/hotesse3.jpg" class="img-responsive margin ">
-							<a href="signin_signup.php">
+							<a href="auth/signin_signup.php">
 								<font face="lato"><button class="btn"">Reserved Now!</button> </font></a>
 				<p></p>
 				<div id=" bedroom_info">
@@ -490,7 +491,7 @@
 				<div class="col-md-3 col-sm-6 col-xs-6">
 					<div class="thumbnail text-center " id="thumbnail1">
 						<img src="product/animation1.jpg" class="img-responsive margin ">
-						<a href="signin_signup.php">
+						<a href="auth/signin_signup.php">
 							<font face="lato"><button class="btn"">Reserved Now!</button> </font></a>
 				<p></p>
 				<div id=" bedroom_info">
@@ -505,7 +506,7 @@
 			<div class="col-md-3 col-sm-6 col-xs-6">
 				<div class="thumbnail text-center " id="thumbnail1">
 					<img src="product/traiteur.jpg" class="img-responsive margin ">
-					<a href="signin_signup.php">
+					<a href="auth/signin_signup.php">
 						<font face="lato"><button class="btn"">Reserved Now!</button> </font></a>
 				<p></p>
 				<div id=" bedroom_info">
@@ -539,8 +540,7 @@
 				</font><br><br><br>
 			</div>
 		</div>
-		<br><br><br><br><br><a name="contact.us"></a><span
-			class="glyphicon glyphicon-phone center-block text-center"></span>
+		<br><br><br><a name="contact.us"></a><span class="glyphicon glyphicon-phone center-block text-center"></span>
 		<h2 class="section text-center main"><b><br>CONTACT </b></h2><br>
 		<div class="container">
 			<div class="row">
@@ -549,7 +549,7 @@
 				</font>
 				<div class="col-md-6">
 
-					<form class="form-horizontal" action="../projet_fin/client_message_db.php" method="post"><br><br>
+					<form class="form-horizontal" action="client_message_db.php" method="post"><br><br>
 						<div class="form-group input-group">
 							<span class="input-group-addon">
 								<span class="glyphicon glyphicon-user"></span>
@@ -567,14 +567,14 @@
 						<div class="form-group">
 							<button class="btn btn-success" id="create">Send Now</button>
 						</div>
-					</form>
 
 				</div>
 
 
 
 
-				<div class="col-md-8 contact_info center-block"><br><br>
+
+				<div class="col-md-6 contact_info center-block"><br><br>
 					<font face="century gothic">
 						<font face="century gothic" color="#ff6f00">
 							<p>Phone:

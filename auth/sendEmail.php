@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>LES SEMINAIRES DU CLUB</title>
-    <link rel="shortcut icon" href="product/header_logo.png">
-    <script src="js/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="../product/header_logo.png">
+    <script src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/bootstrap.min.js"></script>
 </head>
 
 <body style="overflow-x: hidden;">
@@ -23,7 +23,7 @@
         }
     </style>
     <nav class=" navbar-default navbar-inverse navbar-fixed-top" style="background-color: black;">
-        <img src="product/header_logo.png" id="logo">
+        <img src="../product/header_logo.png" id="logo">
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-target="#mainNavbar" data-toggle="collapse">
@@ -34,9 +34,9 @@
             </div>
             <div class="navbar-collapse collapse" id="mainNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="../Projet_fin/index1.php" class="nav-text"></span> ACCEUIL</li></a>
-                    <li><a href="/Projet_fin/home1.php#about.us" class="nav-text"></span> SERVICES</li></a>
-                    <li><a href="/Projet_fin/home1.php#contact.us" class="nav-text"></span> CONTACT</li></a>
+                    <li><a href="../index1.php" class="nav-text"></span> ACCEUIL</li></a>
+                    <li><a href="../home.php#about.us" class="nav-text"></span> SERVICES</li></a>
+                    <li><a href="../home.php#contact.us" class="nav-text"></span> CONTACT</li></a>
 
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -44,13 +44,13 @@
                             <span class="caret "></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="/Projet_fin/home1.php#seminaire" class="nav-text"></span> Séminaires</a></li>
-                            <li><a href="/Projet_fin/home1.php#lancement" class="nav-text"></span> Lancement de
+                            <li><a href="../home.php#seminaire" class="nav-text"></span> Séminaires</a></li>
+                            <li><a href="../home1.php#lancement" class="nav-text"></span> Lancement de
                                     produit</a></li>
-                            <li><a href="/Projet_fin/home1.php#fete" class="nav-text"></span> Fête de fin d’année</a>
+                            <li><a href="../home1.php#fete" class="nav-text"></span> Fête de fin d’année</a>
                             </li>
-                            <li><a href="/Projet_fin/home1.php#Soiree" class="nav-text"></span>Soirée de gala</a></li>
-                            <li><a href="/Projet_fin/home1.php#anniversaire" class="nav-text"></span> Anniversaire
+                            <li><a href="../home1.php#Soiree" class="nav-text"></span>Soirée de gala</a></li>
+                            <li><a href="../home1.php#anniversaire" class="nav-text"></span> Anniversaire
                                     d'entreprise</a></li>
 
 
@@ -74,7 +74,7 @@
             </div>
         </div>
     </nav>
-    <img src="images/2.jpg" id="bg">
+    <img src="../images/2.jpg" id="bg">
     <div class="form">
 
         <ul class="tab-group">
@@ -113,7 +113,7 @@
 
     </div>
 
-    <script src="js/index.js"></script>
+    <script src="../js/index.js"></script>
 
 </body>
 

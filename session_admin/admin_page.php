@@ -2,10 +2,10 @@
 session_start();
 
 if ((!isset($_SESSION['role'])) || (empty($_SESSION['role']))) {
-  header("location: ../projet_fin/home.php");
+  header("location: ../home.php");
 }
 if (($_SESSION['role'] == 'client')) {
-  header("location: ../proget_fin/client.php");
+  header("location: ../client/client.php");
 }
 ?>
 
@@ -17,12 +17,12 @@ if (($_SESSION['role'] == 'client')) {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title> Session Admin </title>
-  <link rel="shortcut icon" href="image/admin_icon1.png">
-  <link href="session_admin/css/bootstrap.min.css" rel="stylesheet">
-  <link href="session_admin/css/styles.css" rel="stylesheet">
-  <script src="session_admin/js/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="session_admin/css/font-awesome.css">
-  <script src="session_admin/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="../image/admin_icon1.png">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <script src="s/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -75,26 +75,26 @@ if (($_SESSION['role'] == 'client')) {
           <div class="col-md-3">
             <div class="list-group">
 
-              <a href="../Projet_fin/admin_page.php" class="list-group-item active main-color-bg"><span
+              <a href="admin_page.php" class="list-group-item active main-color-bg"><span
                   class="glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Dashbord</a>
 
 
 
 
 
-              <a href="../Projet_fin/admin_page.php" style="background-color: #cacdd4" class="list-group-item"><span
+              <a href="admin_page.php" style="background-color: #cacdd4" class="list-group-item"><span
                   class="fa fa-home" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Page d'acceuil</a>
-              <a href="../Projet_fin/Information_client.php" class="list-group-item"><span class="fa fa-user-o"
+              <a href="Information_client.php" class="list-group-item"><span class="fa fa-user-o"
                   aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Clients entrants</a>
-              <a href="../Projet_fin/approve_client1.php" class="list-group-item"><span class="fa fa-sign-in"
+              <a href="approve_client1.php" class="list-group-item"><span class="fa fa-sign-in"
                   aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Client verifié</a>
-              <a href="../projet_fin/client_check_out.php" class="list-group-item"><span class="fa fa-sign-out"
+              <a href="client_check_out.php" class="list-group-item"><span class="fa fa-sign-out"
                   aria-hidden="true"></span>&nbsp;&nbsp;&nbsp; Client extrait</a>
 
 
-              <a href="../Projet_fin/messages.php" class="list-group-item"><span class="fa fa-envelope-open-o"
+              <a href="messages.php" class="list-group-item"><span class="fa fa-envelope-open-o"
                   aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;boîte de réception</a>
-              <a href="../Projet_fin/unset_admin.php" class="list-group-item active main-color-bg"><span
+              <a href="unset_admin.php" class="list-group-item active main-color-bg"><span
                   class="glyphicon glyphicon-cog" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Déconnexion</a>
             </div>
 
@@ -155,7 +155,7 @@ if (($_SESSION['role'] == 'client')) {
 
 
             <?php
-            include_once ("connexion/connexion.php");
+            include_once ("../connexion/connexion.php");
             $bdd = maConnexion();
             $table = "reservation";
             $cle_primaire = "statut";
