@@ -10,6 +10,33 @@
   <link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/bootstrap.min.js"></script>
+  <style>
+    .file-input-wrapper {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+    }
+
+    .file-input {
+      font-size: 100px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+    }
+
+    .btn-custom {
+      border: 2px solid #1ab186;
+      color: white;
+      background-color: #1ab186;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .btn-custom:hover {
+      background-color: #17a278;
+    }
+  </style>
 </head>
 
 <body style="overflow-x: hidden;">
@@ -57,9 +84,9 @@
             </a>
             <ul class="dropdown-menu">
               <li><a href="#" class="nav-text"><span class="fa fa-sign-in">
-                    <font face="century gothic">&nbsp;&nbsp;&nbsp;Se connecter</font></a></li>
+                <font face="century gothic">&nbsp;&nbsp;&nbsp;Se connecter</font></a></li>
               <li><a href="#" class="nav-text"><span class="fa fa-user-plus">
-                    <font face="century gothic">&nbsp;&nbsp;&nbsp;S'inscrire</font></a></li>
+                <font face="century gothic">&nbsp;&nbsp;&nbsp;S'inscrire</font></a></li>
             </ul>
           </li>
         </ul>
@@ -115,8 +142,12 @@
             <input type="password" name="mdp" required autocomplete="off" />
           </div>
           <div class="field-wrap">
-            <input type="file" name="profile_image" accept="image/*" required />
+            <div class="file-input-wrapper">
+              <button class="btn-custom">Choisir une image</button>
+              <input type="file" name="profile_image" class="file-input" accept="image/*" required />
+            </div>
           </div>
+
           <button type="submit" class="button button-block">Envoyer</button>
         </form>
       </div>
@@ -132,5 +163,4 @@
     </div>
   </footer>
 </body>
-
 </html>
